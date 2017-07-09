@@ -1,7 +1,13 @@
-Java 
+Java ;Java.;Java,;JSE;JEE;Джав;J2EE
+Scala
+Spring
 Python
 AngularJS
+Hibernate
+Maven
 SQL
+CORBA
+Swing
 NoSQL
 Git
 Celery

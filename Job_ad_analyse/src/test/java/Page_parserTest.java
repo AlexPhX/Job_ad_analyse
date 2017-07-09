@@ -1,15 +1,14 @@
 import static org.junit.Assert.*;
 
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 
-import org.junit.Ignore;
+import org.jsoup.HttpStatusException;
 import org.junit.Test;
 
 public class Page_parserTest {
 	
-	Page_parser pp = new Page_parser();
+	Page_parser pp = new Page_parser(null);
 
 	@Test
 	public void testFile_parser() throws URISyntaxException {
@@ -28,7 +27,7 @@ public class Page_parserTest {
 	}
 
 	@Test
-	public void testURL_parser() {
+	public void testURL_parser() throws HttpStatusException {
 		assertEquals("Обязанности: Доработка не типовой конфигурации на платформе 1С8.11.3 Написание "
 				+ "обработок, отчетов, печатных форм. Настройка внешних компонентов в 1С Настройка обмена"
 				+ " данными между различными информационными базами. Требования: Знание методологии 1С8 Наличие"

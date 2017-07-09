@@ -1,5 +1,3 @@
-import static org.junit.Assert.*;
-
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
@@ -27,10 +25,11 @@ public class Description_parserTest {
 	@Test
 	public void testGet_Words() {
 		Description_parser dp = new Description_parser();
-		Keywords_reader kr = new Keywords_reader();
-		int[] test = new int[kr.keywords.size()];
+		Keywords_reader kr = new Keywords_reader("keywords.txt");
+		int[] test = new int[kr.getKeywords().size()];
 		for (int i = 0; i<ads.size(); i++) {
-			test = dp.get_Words(ads.get(i), kr.keywords);
+			test = dp.get_Words(ads.get(i), kr.getKeywords());
+			System.out.print(i + 1 + " : ");
 			Arrays.stream(test).forEach(item -> System.out.print(item + " "));
 			System.out.println();
 		}
